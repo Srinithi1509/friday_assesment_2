@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>unique elements in two array</h1>
+    <script>
+        function findUniqueElements(arr1, arr2) {
+    return [...new Set([...arr1, ...arr2].filter(x => !(arr1.includes(x) && arr2.includes(x))))];
+}
+
+const arr1 = [1, 2, 3];
+const arr2 = [2, 4, 5];
+
+console.log(findUniqueElements(arr1, arr2)); 
+    </script>
+</body>
+</html>

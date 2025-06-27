@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = "aabbbcc";
+        let count = {};
+
+        // Count how many times each character appears
+        for (let i = 0; i < arr.length; i++) {
+            let char = arr[i];
+            if (count[char]) {
+                count[char]++;
+            } else {
+                count[char] = 1;
+            }
+        }
+
+        // Find the character with the maximum count
+        let maxCount = Math.max(...Object.values(count));
+        let mostRepeatedChar = Object.keys(count).find(key => count[key] === maxCount);
+
+        console.log("Most repeated character is:", mostRepeatedChar, "with count:", maxCount);
+    </script>
+</body>
+</html>
+
+    </script>
+</body>
+</html>
